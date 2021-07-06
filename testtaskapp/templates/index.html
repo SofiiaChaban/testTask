@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Themes</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <header>
+        <h1 class="title">Themes</h1>
+    </header>
+    <main>
+        <form action = "{% url 'save_pdf' %}" method="post">
+          {% csrf_token %}
+          {% for theme in themes %}
+              <div>
+                  <input type="checkbox" class="customCheckbox" name= "selectedThemes" value="{{ theme.id }}" id = "{{ theme.id }}">
+                  <label for="{{ theme.id }}"><a href="{{ theme.url }}" class="themeLabel"> {{ theme.title }}</a></label>
+              </div>
+          {% endfor %}
+          <input class="submitBtn" type="submit" value="Save PDF!">
+        </form>
+    </main>
+</body>
+</html>

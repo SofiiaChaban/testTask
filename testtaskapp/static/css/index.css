@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #eddcd9;
+    font-family: 'Monaco','monospace';
+}
+
+.title{
+    text-align: center;
+    background: #f2ebe9;
+    margin: 0;
+    color: #e99f4c;
+}
+
+form{
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+}
+label{
+    display: inline-block;
+    width:470px;
+}
+
+label:hover{
+    background: #dbcbc8;
+}
+
+.themeLabel{
+    text-decoration: none;
+}
+
+.themeLabel:link {
+  color: black;
+}
+
+.themeLabel:visited {
+  color: black;
+}
+
+.themeLabel:hover {
+  font-style: italic;
+}
+
+.submitBtn{
+    float:right;
+    background: #e99f4c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+.submitBtn:hover{
+    background: #bd813c;
+}
